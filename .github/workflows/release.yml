@@ -26,6 +26,9 @@ jobs:
       - name: save docker image
         run: docker save --output tic-tac-toe.tar gaming/tic-tac-toe:latest
 
+      - name: debug output
+        run: ls -lah
+
       - name: release docker image
         uses: ncipollo/release-action@v1
         with:
