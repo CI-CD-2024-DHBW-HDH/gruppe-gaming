@@ -1,0 +1,33 @@
+name: Create and publish a Docker image
+
+on:
+  workflow_dispatch:
+
+env:
+  REGISTRY: ghcr.io
+  IMAGE_NAME: ${{ github.repository }}
+
+jobs:
+  build-and-push-image:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      packages: write
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Set up Docker Buildx
+        uses: docker/setup-buildx-action@v3
+
+      - name: run docker build
+        run: docker build . --tag gaming/tic-tac-toe:latest
+
+      - name: save docker image
+        run: docker save --output tic-tac-toe.tar gaming/tic-tac-toe:latest
+
+      - name: release docker image
+        uses: ncipollo/release-action@v1
+        with:
+          artifacts: tic-tac-toe.tar
+          tag: v1.0.${{ github.run_number }}
