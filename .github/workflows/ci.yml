@@ -1,0 +1,19 @@
+name: CI
+run-name: ${{ github.actor }} is running CI
+on: [push, pull_request]
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v2
+      - name: NPM install
+        run: npm install
+      - name: Svelte Check
+        run: npm run check
+      - name: format check
+        run: npm run format:check
+      - name: eslint check
+        run: npm run lint
+      - name: run test
+        run: npm run test
