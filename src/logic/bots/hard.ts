@@ -23,13 +23,15 @@ function minimax(
   board: Field[],
   currentPlayer: Field,
   own: Field,
-  maximize: boolean
+  maximize: boolean,
 ): number {
   const blanks = getBlanks(board);
 
   const winner = won(board);
-  if (winner === own) return 1; // win
-  else if (winner === invertPlayer(own)) return -1; // loss
+  if (winner === own)
+    return 1; // win
+  else if (winner === invertPlayer(own))
+    return -1; // loss
   else if (!blanks.length) return 0; // draw
 
   let bestScore: number = maximize ? -Infinity : Infinity;

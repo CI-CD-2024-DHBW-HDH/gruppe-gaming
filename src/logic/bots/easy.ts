@@ -9,12 +9,12 @@ export function easyMove(board: Field[], own: Field): number {
     return move;
   } else {
     let freeFields = [];
-    for (let i = 0; i<board.length; i++){
+    for (let i = 0; i < board.length; i++) {
       if (board[i] === Field.EMPTY) {
         freeFields.push(i);
       }
     }
-    const rndInt = Math.floor(Math.random() * freeFields.length)
-    return freeFields[rndInt]
+    const rndInt = Math.floor(Math.random() * freeFields.length);
+    return freeFields[rndInt];
   }
 }
