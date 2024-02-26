@@ -10,9 +10,9 @@
     "check": "svelte-check --tsconfig ./tsconfig.json",
     "test": "jest",
     "format:check": "prettier -c --plugin prettier-plugin-svelte .",
-    "lint": "eslint './src/**/*.{js,ts,svelte}'",
-    "lint:fix": "eslint --fix './src/**/*.{js,ts,svelte}'",
-    "format": "prettier --write  --plugin prettier-plugin-svelte ."
+    "lint": "eslint",
+    "lint:fix": "eslint --fix",
+    "format": "prettier --write --plugin prettier-plugin-svelte ."
   },
   "devDependencies": {
     "@sveltejs/vite-plugin-svelte": "^2.0.2",
