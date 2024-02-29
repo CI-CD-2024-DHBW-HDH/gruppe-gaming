@@ -2,4 +2,9 @@
 
 ## Team mitglieder
 
-Simon Berndt, Noah Liberka, Maximilian Volk, Lars Jaeger
+Simon, Noah, Max, Lars
+
+
+## Spielen unter:
+
+http://tic-tac-toe.xyz/
