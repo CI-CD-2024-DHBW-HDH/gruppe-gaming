@@ -1,6 +1,6 @@
 # Tic Tac Toe
 
-## Team mitglieder
+## Teammitglieder
 
 Simon, Noah, Max, Lars
 
