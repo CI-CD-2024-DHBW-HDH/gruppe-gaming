@@ -8,7 +8,7 @@ metadata:
   labels:
     app: tic-tac-toe
   name: tic-tac-toe
-  namespace: default
+  namespace: gruppe-gaming
   resourceVersion: "25888"
   uid: 72dc8ac8-044b-4872-ae01-c376a6e8ab48
 spec:
