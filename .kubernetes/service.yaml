@@ -6,9 +6,9 @@ metadata:
   name: tic-tac-toe
   namespace: gruppe-gaming
 spec:
-  clusterIP: 10.245.231.47
+  clusterIP: 10.245.232.46
   clusterIPs:
-  - 10.245.231.47
+  - 10.245.232.46
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ipFamilies:
