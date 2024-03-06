@@ -1,0 +1,21 @@
+on:
+  push:
+    branches:
+      - main
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v2
+      - name: Set up Kubectl
+        uses: azure/k8s-set-context@v1
+        with:
+          kubeconfig: ${{ secrets.KUBECONFIG }}
+      - name: show dic
+        run: |
+          ls -la
+      - name: Deploy
+        run: |
+          kubectl apply -f .kubernetes/deployment.yaml
+          kubectl apply -f .kubernetes/service.yaml
