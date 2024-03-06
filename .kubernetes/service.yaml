@@ -9,9 +9,9 @@ metadata:
   resourceVersion: "12028"
   uid: c4083d46-335e-484f-9078-878c584b6298
 spec:
-  clusterIP: 10.104.231.47
+  clusterIP: 10.245.231.47
   clusterIPs:
-  - 10.104.231.47
+  - 10.245.231.47
   externalTrafficPolicy: Cluster
   internalTrafficPolicy: Cluster
   ipFamilies:
