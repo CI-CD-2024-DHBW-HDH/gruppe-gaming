@@ -1,0 +1,18 @@
+apiVersion: networking.k8s.io/v1
+kind: Ingress
+metadata:
+  name: gaming
+  namespace: gruppe-gaming
+spec:
+  ingressClassName: nginx
+  rules:
+    - host: gaming.dhbw.schoeppi5.de
+      http:
+        paths:
+          - backend:
+              service:
+                name: tic-tac-toe
+                port:
+                  number: 8080
+            path: /
+            pathType: Prefix
