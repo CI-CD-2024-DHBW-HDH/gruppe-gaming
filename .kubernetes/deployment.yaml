@@ -9,8 +9,6 @@ metadata:
     app: tic-tac-toe
   name: tic-tac-toe
   namespace: gruppe-gaming
-  resourceVersion: "25888"
-  uid: 72dc8ac8-044b-4872-ae01-c376a6e8ab48
 spec:
   progressDeadlineSeconds: 600
   replicas: 3
@@ -25,7 +23,6 @@ spec:
     type: RollingUpdate
   template:
     metadata:
-      creationTimestamp: null
       labels:
         app: tic-tac-toe
     spec:
@@ -43,22 +40,3 @@ spec:
       schedulerName: default-scheduler
       securityContext: {}
       terminationGracePeriodSeconds: 30
-status:
-  availableReplicas: 3
-  conditions:
-  - lastTransitionTime: "2024-02-29T13:58:27Z"
-    lastUpdateTime: "2024-02-29T14:00:28Z"
-    message: ReplicaSet "tic-tac-toe-868575997d" has successfully progressed.
-    reason: NewReplicaSetAvailable
-    status: "True"
-    type: Progressing
-  - lastTransitionTime: "2024-02-29T14:20:27Z"
-    lastUpdateTime: "2024-02-29T14:20:27Z"
-    message: Deployment has minimum availability.
-    reason: MinimumReplicasAvailable
-    status: "True"
-    type: Available
-  observedGeneration: 10
-  readyReplicas: 3
-  replicas: 3
-  updatedReplicas: 3
