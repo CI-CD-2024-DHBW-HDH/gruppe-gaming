@@ -12,7 +12,8 @@ jobs:
         uses: azure/k8s-set-context@v1
         with:
           kubeconfig: ${{ secrets.KUBECONFIG }}
-
+      - name: Create namespace
+        run: kubectl create namespace gruppe-gaming --dry-run=client -o yaml | kubectl apply -f -
       - name: Deploy
         run: |
           kubectl apply -f .kubernetes/deployment.yaml
