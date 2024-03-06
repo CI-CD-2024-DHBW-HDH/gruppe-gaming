@@ -4,7 +4,7 @@ metadata:
   labels:
     app: tic-tac-toe
   name: tic-tac-toe
-  namespace: default
+  namespace: gruppe-gaming
 spec:
   clusterIP: 10.245.231.47
   clusterIPs:
